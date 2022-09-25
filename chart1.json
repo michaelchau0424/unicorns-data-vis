@@ -1,12 +1,4 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Cheapest Europe cities" },
-    "data": {
-        "url": "data/Unicorn_Companies.csv"
-    },
-    "mark": "bar",
-    "encoding": {
-        "y": { "field": "city", "type": "nominal" },
-        "x": { "field": "daily_cost", "type": "quantitative" }
-    }
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+    
 }
