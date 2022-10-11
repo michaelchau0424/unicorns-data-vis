@@ -1,89 +1,87 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height":450,
-    "padding": {"left": -200, "top": 30, "right": 5, "bottom": 5}, 
-    "title": "Number of New Unicorns by Industry Over Time",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height":450,
+  "padding": {"left": -200, "top": 30, "right": 5, "bottom": 5}, 
+  "title": "Number of New Unicorns by Industry Over Time",
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/UnicornDataForBump.csv"
+  },
+  
+ 
+  "encoding": {
+    "x":{"field":"YearJoined", "timeUnit":"year", "type": "temporal"},
+    "y": {"field": "rank", "type": "quantitative",
+      "scale":{"domain":[5,1]} }
     
-    "data": {
-      "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/Unicorn_Companies_clean2.csv"
     },
+  "layer": [
     
-  
-  
-    
-   
-    "encoding": {
-      "x":{"field":"YearJoined", "timeUnit":"year", "type": "temporal"},
-      "y": {"field": "NumberOfUnicorns", "type": "quantitative",
-        "scale":{"domain":[0,150]} }
+    {
+      "mark":{"type": "line", "point": true},
+      "params": [{
+        "name": "industrySelect",
+        "select": {"type": "point", "fields": ["Industry"]},
+        "bind": "legend"
+      }],
       
-      },
-    "layer": [
-      
-      {
-        "mark":{"type": "line", "point": true},
-        "params": [{
-          "name": "industrySelect",
-          "select": {"type": "point", "fields": ["Industry"]},
-          "bind": "legend"
-        }],
-        
-        "encoding": {
-          "color":{
-            "field":"Industry",
-            "scale":{"scheme":"category10"}
-            
-          },
-          "tooltip":[
-            {"field":"Industry", "type": "nominal"},
-            {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
-            {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
-          ],
-          "opacity": {
-            "condition": {"param": "industrySelect", "value": 1},
-            "value": 0.2
-          }
+      "encoding": {
+        "color":{
+          "field":"Industry",
+          "scale":{"scheme":"category10"}
           
-        }
-      },
-      {
-        "mark":{
-          
-          "type": "text",
-          "text":["Fintech benefited most from the unicorn boom in 2021"],
-          "width":10,
-          "align": "right",
-          "baseline": "middle",
-          "dx": -12,
-          "fontSize": 11.5,
-          "fontStyle": "italic"
         },
-        
-        "encoding": {
-          
-          "opacity": {
-            "condition": {
-              "test": "datum['Industry'] == 'Fintech' & datum['YearJoined'] == '1609459200000' ",
-              "value": 1
-              },
-            "value": 0
-          },
-          "tooltip":[
-            {"field":"Industry", "type": "nominal"},
-            {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
-            {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
-          ] 
-  
+        "size":{"value":2},
+        "tooltip":[
+          {"field":"Industry", "type": "nominal"},
+          {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
+          {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
+        ],
+        "opacity": {
+          "condition": {"param": "industrySelect", "value": 1},
+          "value": 0.2
         }
-        
         
       }
+    },
+    {
+      "mark":{
+        
+        "type": "text",
+        "text":["Fintech benefited most from the unicorn boom in 2021"],
+        "width":10,
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
       
+      "encoding": {
+        
+        "opacity": {
+          "condition": {
+            "test": "datum['Industry'] == 'Fintech' & datum['YearJoined'] == '1609459200000' ",
+            "value": 1
+            },
+          "value": 0
+        },
+        "tooltip":[
+          {"field":"Industry", "type": "nominal"},
+          {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
+          {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
+        ] 
+
+      }
+      
+      
+    }
+    
+
+  ]
   
-    ]
-    
-    
-    
-    
-  }
+  
+  
+  
+}
