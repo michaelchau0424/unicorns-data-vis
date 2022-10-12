@@ -21,7 +21,7 @@
     
     "x":{
       "field":"YearJoined", 
-      "timeUnit":"yearmonthdate", 
+      "timeUnit":"year", 
       "type":"temporal",
       "axis": {"grid": false, "ticks": false}
            
@@ -56,7 +56,7 @@
         "size":{"value":2},
         "tooltip":[
           {"field":"Industry", "type": "nominal"},
-          {"field":"YearJoined", "timeUnit":"yearmonthdate","title":"Year Joined"},
+          {"field":"YearJoined", "timeUnit":"year","title":"Year Joined"},
           {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
         ],
         "opacity": {
@@ -92,7 +92,7 @@
         },
         "tooltip":[
           {"field":"Industry", "type": "nominal"},
-          {"field":"YearJoined", "type": "temporal", "timeUnit":"yearmonthdate", "title":"Year Joined"},
+          {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
           {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
         ] 
 
