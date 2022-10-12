@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":600,
+  "height":300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/Unicorn_Companies_clean2.csv"
+  },
+  
+  "params": [
+    {
+      "name": "highlight",
+      "select": {"type": "point", "on": "mouseover"}
+    },
+    {"name": "select", "select": "point"}
+  ],
+  "mark": {
+    "type": "bar",
+    "stroke": "black",
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "color":{
+      "field":"Industry",
+      "scale":{"scheme":"pastel1"}
+    },
+    "x": {"field": "Industry", "type": "ordinal", "sort":"y"},
+    "y":{"field":"Valuation ($B)", "type": "quantitative"},
+    "fillOpacity": {
+      "condition": {"param": "select", "value": 1},
+      "value": 0.3
+
+    },
+    
+    "strokeWidth": {
+      "condition": [
+        {
+          "param": "select",
+          "empty": false,
+          "value": 2
+        },
+        {
+          "param": "highlight",
+          "empty": false,
+          "value": 1
+        }
+      ],
+      "value": 0
+    }
+  },
+  "config": {
+    "scale": {
+      "bandPaddingInner": 0.2
+    }
+  }
+}
