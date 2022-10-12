@@ -2,8 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height":450,
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "padding": {"left": -200, "top": 30, "right": 5, "bottom": 5}, 
-  "title": "Number of New Unicorns by Industry Over Time",
+  "title": "Top 5 Unicorn Industries ranked over time",
   
   "data": {
     "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/UnicornDataForBump.csv"
@@ -11,11 +18,24 @@
   
  
   "encoding": {
-    "x":{"field":"YearJoined", "timeUnit":"year", "type": "temporal"},
-    "y": {"field": "rank", "type": "quantitative",
-      "scale":{"domain":[5,1]} }
     
+    "x":{
+      "field":"YearJoined", 
+      "timeUnit":"yearmonthdate", 
+      "type":"temporal",
+      "axis": {"grid": false, "ticks": false}
+           
     },
+    "y": {
+      "field": "rank", 
+      "type": "quantitative",
+      "scale":{"domain":[5.4,1]},
+      "axis": {"grid": false, "ticks": false, "labels": false, "title":null}
+    }
+    
+  },
+
+
   "layer": [
     
     {
@@ -29,13 +49,14 @@
       "encoding": {
         "color":{
           "field":"Industry",
-          "scale":{"scheme":"category10"}
+          "scale":{"scheme":"pastel1"}
           
         },
+        
         "size":{"value":2},
         "tooltip":[
           {"field":"Industry", "type": "nominal"},
-          {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
+          {"field":"YearJoined", "timeUnit":"yearmonthdate","title":"Year Joined"},
           {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
         ],
         "opacity": {
@@ -45,6 +66,8 @@
         
       }
     },
+
+    
     {
       "mark":{
         
@@ -69,7 +92,7 @@
         },
         "tooltip":[
           {"field":"Industry", "type": "nominal"},
-          {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
+          {"field":"YearJoined", "type": "temporal", "timeUnit":"yearmonthdate", "title":"Year Joined"},
           {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
         ] 
 
