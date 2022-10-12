@@ -4,6 +4,7 @@
     "height": 450,
     "title": "Number of Unicorns from each Country",
     "projection": {"type": "equalEarth"},
+    
 
     "data": {
         "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/ne_110m.json",
@@ -35,18 +36,43 @@
             {"calculate": "floor(datum.UnicornCount + 0.1)", "as": "Number of Unicorns"}
     
         ],
-        "mark":{"type": "geoshape", "stroke":"white"},
+        "mark":{"type": "geoshape", "stroke":"black"},
+        "params": 
+        [
+          {
+            "name": "highlight",
+            "select": {"type": "point", "on": "mouseover"}
+          },
+          {"name": "select", "select": "point"}
+        ],
         "encoding": {
             "color":{
                 "field": "Number of Unicorns (Log Scale)",
                 "type": "quantitative",
                 "scale": {"type": "log", "scheme":"purplered"}
                 
+                
             },
+            
             "tooltip": [
                 {"field": "properties.NAME_LONG", "type": "nominal", "title": "Country"},
                 {"field": "Number of Unicorns", "type": "quantitative"}  
-            ]
+            ],
+            "strokeWidth": {
+              "condition": [
+                {
+                  "param": "select",
+                  "empty": false,
+                  "value": 3
+                },
+                {
+                  "param": "highlight",
+                  "empty": false,
+                  "value": 2
+                }
+              ],
+              "value": 0.4
+            }
         
         }     
     },
