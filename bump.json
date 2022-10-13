@@ -40,11 +40,17 @@
     
     {
       "mark":{"type": "line", "point": true},
-      "params": [{
-        "name": "industrySelect",
-        "select": {"type": "point", "fields": ["Industry"]},
-        "bind": "legend"
-      }],
+      "params": [
+        {
+          "name": "industrySelect",
+          "select": {"type": "point", "fields": ["Industry"]},
+          "bind": "legend"
+        },
+        {
+          "name": "yearRangeSlider",
+          "bind":{"input": "range", "min": 2015, "max": 2022, "step": 1}
+        }
+      ],
       
       "encoding": {
         "color":{
