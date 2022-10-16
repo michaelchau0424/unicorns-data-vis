@@ -3,49 +3,106 @@
   "title": "Total Valuation by Industry",
   "width": 530,
   "height": 400,
-
-  
   "data": {
     "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/Unicorn_Companies_clean2.csv"
   },
   "transform": [
     {
-      "aggregate": [{
-        "op": "sum",
-        "field": "Valuation ($B)",
-        "as": "totalValuation"
-      }],
-      "groupby": ["Industry"]
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Valuation ($B)",
+          "as": "totalValuation"
+        }
+      ],
+      "groupby": [
+        "Industry"
+      ]
     }
   ],
   "params": [
-    {"name": "highlight", "select": {"type": "point", "on": "mouseover"}},
-    {"name": "select", "select": "point"}
+    {
+      "name": "highlight",
+      "select": {
+        "type": "point",
+        "on": "mouseover"
+      }
+    },
+    {
+      "name": "select",
+      "select": "point"
+    }
   ],
-  "mark": {"type": "bar", "stroke": "black", "cursor": "pointer"},
+  "mark": {
+    "type": "bar",
+    "stroke": "black",
+    "cursor": "pointer"
+  },
   "encoding": {
-    "color": {"field": "Industry", "scale": {"scheme": "category20"}, "legend":null },
-    "y": {"field": "Industry", "type": "ordinal", "sort": "-x", "axis":{"title":null, "": false }},
-    "x": {"field": "totalValuation", "type": "quantitative", "title":"Total Valuation ($B)"},
-    "fillOpacity": {"condition": {"param": "select", "value": 1}, "value": 0.3},
+    "color": {
+      "field": "Industry",
+      "scale": {
+        "scheme": "category20"
+      },
+      "legend": null
+    },
+    "y": {
+      "field": "Industry",
+      "type": "ordinal",
+      "sort": "-x",
+      "axis": {
+        "title": null,
+        "": false
+      }
+    },
+    "x": {
+      "field": "totalValuation",
+      "type": "quantitative",
+      "title": "Total Valuation ($B)"
+    },
+    "fillOpacity": {
+      "condition": {
+        "param": "select",
+        "value": 1
+      },
+      "value": 0.3
+    },
     "strokeWidth": {
       "condition": [
-        {"param": "select", "empty": false, "value": 2},
-        {"param": "highlight", "empty": false, "value": 1}
+        {
+          "param": "select",
+          "empty": false,
+          "value": 2
+        },
+        {
+          "param": "highlight",
+          "empty": false,
+          "value": 1
+        }
       ],
       "value": 0
     },
-    "tooltip":[
-      {"field": "Industry", "type": "nominal", "title": "Industry"},
-      {"field": "totalValuation", "type": "quantitative", "title":"Total Valuation ($B)"}  
+    "tooltip": [
+      {
+        "field": "Industry",
+        "type": "nominal",
+        "title": "Industry"
+      },
+      {
+        "field": "totalValuation",
+        "type": "quantitative",
+        "title": "Total Valuation ($B)"
+      }
     ]
   },
   "config": {
-    "scale": {"bandPaddingInner": 0.2},
+    "scale": {
+      "bandPaddingInner": 0.2
+    },
     "style": {
       "cell": {
         "stroke": "transparent"
       }
     }
-}
+  }
 }

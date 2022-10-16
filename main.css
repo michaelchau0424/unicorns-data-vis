@@ -24,6 +24,11 @@ body {
 
 }
 
+.sectiontitle{
+  position: relative;
+  width: 40%;
+}
+
 .lefttext{
   padding-left: 20%;
 }
@@ -37,14 +42,14 @@ body {
 }
 
 #titlebox{
-  background-color: grey;
+  background-color: #68bcbc;
   width: 100%;
   height: 300px;;
   margin-top: 3%;
   position: relative;
-  background-image: url("./images/unicorn-startup-min.jpg");
-  background-size: cover;
-  background-position-y: 30%;
+  background-image: url("./images/unicorn-startup-min2.jpg");
+  background-repeat: no-repeat;
+  background-size: 420px 300px;
   
 }
 
