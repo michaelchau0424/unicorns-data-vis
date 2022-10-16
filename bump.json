@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height":450,
+  
   "config": {
     "style": {
       "cell": {
@@ -9,20 +10,21 @@
       }
     }
   },
-  "padding": {"left": -200, "top": 30, "right": 5, "bottom": 5}, 
+  "padding": {"left": 0, "top": 0, "right":0, "bottom": 0}, 
   "title": "Top 5 Unicorn Industries ranked over time",
   
   "data": {
     "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/UnicornDataForBump.csv"
   },
   
+  
+  
  
   "encoding": {
     
     "x":{
       "field":"YearJoined", 
-      "timeUnit":"year", 
-      "type":"temporal",
+      "type":"ordinal",
       "axis": {"grid": false, "ticks": false}
            
     },
@@ -35,11 +37,15 @@
     
   },
 
-
   "layer": [
-    
     {
-      "mark":{"type": "line", "point": true},
+      "mark":{
+        "type":"point",
+        "size":400,
+        "filled": true
+      
+      },
+      
       "params": [
         {
           "name": "industrySelect",
@@ -52,6 +58,29 @@
         }
       ],
       
+      
+      "encoding": {
+        "color":{
+          "field":"Industry",
+          "scale":{"scheme":"pastel1"}
+          
+        },
+        "tooltip":[
+          {"field":"Industry"},
+          {"field":"YearJoined","title":"Year Joined"},
+          {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
+        ],
+        "opacity": {
+          "condition": {"param": "industrySelect", "value": 1},
+          "value": 0.2
+        }
+
+      }
+    },
+    
+    {
+      "mark":{"type": "line", "point": true},
+      
       "encoding": {
         "color":{
           "field":"Industry",
@@ -59,53 +88,17 @@
           
         },
         
-        "size":{"value":2},
-        "tooltip":[
-          {"field":"Industry", "type": "nominal"},
-          {"field":"YearJoined", "timeUnit":"year","title":"Year Joined"},
-          {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
-        ],
+        "size":{"value":4},
         "opacity": {
           "condition": {"param": "industrySelect", "value": 1},
           "value": 0.2
         }
         
       }
-    },
+    }
 
     
-    {
-      "mark":{
-        
-        "type": "text",
-        "text":["Fintech benefited most from the unicorn boom in 2021"],
-        "width":10,
-        "align": "right",
-        "baseline": "middle",
-        "dx": -12,
-        "fontSize": 11.5,
-        "fontStyle": "italic"
-      },
-      
-      "encoding": {
-        
-        "opacity": {
-          "condition": {
-            "test": "datum['Industry'] == 'Fintech' & datum['YearJoined'] == '1609459200000' ",
-            "value": 1
-            },
-          "value": 0
-        },
-        "tooltip":[
-          {"field":"Industry", "type": "nominal"},
-          {"field":"YearJoined", "type": "temporal", "timeUnit":"year", "title":"Year Joined"},
-          {"field":"NumberOfUnicorns", "type": "quantitative", "title":"Number of Unicorns Joined"}
-        ] 
-
-      }
-      
-      
-    }
+   
     
 
   ]

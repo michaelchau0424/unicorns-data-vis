@@ -1,0 +1,25 @@
+body {
+  padding: 0;
+  margin: 0;
+  margin: 0px auto;
+  background-color: pink;
+}
+
+.maintitles{
+  text-align: center;
+  padding-top: 3%;
+}
+
+.mainbody {
+  position: relative;
+  background-color: white;
+  width: 70%;
+  height:fit-content;
+  left:15%;
+  margin-top: 3%;
+
+}
+
+.lefttext{
+  padding-left: 4%;
+}
