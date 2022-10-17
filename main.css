@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope");
+@import url("https://fonts.googleapis.com/css?family=Bungee");
+
 body {
   padding: 0;
   margin: 0;
@@ -6,12 +9,29 @@ body {
   background-image: url("./images/unicorncollage.png");
   background-repeat: repeat;
   background-size: 370px 250px;
+
+  
   
 }
 
 .maintitles{
   text-align: left;
   padding-top: 7%;
+  color: white;
+  text-shadow: #000;
+  font-family: "Bungee";
+  padding-left: 5%;
+  font-size: 70px;
+
+}
+
+.mainsubtitle{
+  text-align: left;
+  color: white;
+  text-shadow: #000;
+  font-family: "Bungee";
+  padding-left: 5%;
+  font-size: 20px;
 }
 
 .mainbody {
@@ -26,19 +46,35 @@ body {
 
 .sectiontitle{
   position: relative;
-  width: 40%;
+  padding-left: 4%;
+  font-family: "Bungee";
 }
 
 .lefttext{
-  padding-left: 17%;
+  padding-left: 10%;
+  padding-right: 5%;
+  text-align: center;
+  font-family: 'Manrope';
 }
 
 .righttext{
-  padding-right: 20%;
+  padding-right: 10%;
+  padding-left: 5%;
+  
 }
 
 .mapchart{
   padding-left: 4%;
+}
+
+.bumpchart{
+  padding-left: 8%;
+  padding-bottom: 2%;
+  padding-top: 5%;
+}
+
+.barchart{
+  padding-right: 7%;
 }
 
 #titlebox{
@@ -64,4 +100,6 @@ hr.rounded {
 #valuationtext{
   font-size: 40px;
   color: #ff9896;
+  font-weight:500;
+  
 }

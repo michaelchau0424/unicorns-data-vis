@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Total Valuation by Industry",
-  "width": 530,
-  "height": 400,
+  "width": 480,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/Unicorn_Companies_clean2.csv"
   },

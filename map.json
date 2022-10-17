@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "vconcat": [
     {
-      "width": 1250,
+      "width": 1175,
       "height": 550,
       "title": "Number of Unicorns from each Country",
       "projection": {
@@ -92,7 +92,7 @@
                 "scheme": "purplered"
               },
               "legend": {
-                "orient": "top"
+                "orient": "bottom"
               }
             },
             "tooltip": [
@@ -139,60 +139,15 @@
           }
         }
       ]
-    },
-    {
-      "width": 700,
-      "transform": [
-        {
-          "lookup": "properties.NAME_LONG",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/michaelchau0424/unicorns-data-vis/master/data/Unicorn_Companies_clean2.csv"
-            },
-            "key": "Country",
-            "fields": [
-              "Company",
-              "Valuation"
-            ]
-          }
-        },
-        {
-          "joinaggregate": [
-            {
-              "op": "sum",
-              "field": "Valuation",
-              "as": "ValuationSumByCountry"
-            }
-          ],
-          "groupby": [
-            "Country"
-          ]
-        },
-        {
-          "calculate": "datum.Valuation",
-          "as": "Valuation from Country"
-        },
-        {
-          "filter": {
-            "param": "select",
-            "empty": false
-          }
-        }
-      ],
-      "mark": {
-        "type": "arc"
-      },
-      "encoding": {
-        "theta": {
-          "field": "ValuationSumByCountry",
-          "type": "quantitative"
-        },
-        "color": {
-          "field": "datum.Company",
-          "type": "nominal"
-        }
-      }
     }
+
+
+
+
+
+
+    
+    
   ],
-  "config": {}
+  "config": {"style": {"cell": {"stroke": "transparent"}}}
 }
