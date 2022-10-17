@@ -1,0 +1,185 @@
+,Country,Industry,Valuation ($B)
+0,Argentina,Fintech,2.45
+1,Australia,E-commerce & direct-to-consumer,1.0
+2,Australia,Fintech,5.5
+3,Australia,Internet software & services,44.1
+4,Austria,Edtech,3.5
+5,Austria,Fintech,4.11
+6,Belgium,Data management & analytics,5.25
+7,Belgium,Fintech,1.4
+8,Belgium,Internet software & services,2.3
+9,Bermuda,Artificial Intelligence,1.6
+10,Brazil,Artificial Intelligence,1.0
+11,Brazil,E-commerce & direct-to-consumer,13.6
+12,Brazil,Fintech,14.379999999999999
+13,Brazil,Mobile & telecommunications,1.0
+14,Brazil,Other,3.0
+15,Brazil,"Supply chain, logistics, & delivery",4.0
+16,Canada,Artificial Intelligence,2.2
+17,Canada,Cybersecurity,9.65
+18,Canada,E-commerce & direct-to-consumer,4.15
+19,Canada,Edtech,3.0
+20,Canada,Fintech,13.8
+21,Canada,Internet software & services,9.0
+22,Canada,Other,1.23
+23,Canada,"Supply chain, logistics, & delivery",1.0
+24,Canada,Travel,5.0
+25,Chile,Artificial Intelligence,2.5
+26,China,Artificial Intelligence,174.21999999999997
+27,China,Auto & transportation,52.36
+28,China,Consumer & retail,38.160000000000004
+29,China,Cybersecurity,1.32
+30,China,Data management & analytics,3.12
+31,China,E-commerce & direct-to-consumer,101.08
+32,China,Edtech,33.83
+33,China,Fintech,10.36
+34,China,Hardware,60.550000000000004
+35,China,Health,21.32
+36,China,Internet software & services,17.759999999999998
+37,China,Mobile & telecommunications,21.16
+38,China,Other,16.37
+39,China,"Supply chain, logistics, & delivery",15.080000000000002
+40,China,Travel,5.0
+41,Colombia,Other,1.15
+42,Colombia,"Supply chain, logistics, & delivery",5.25
+43,Croatia,Mobile & telecommunications,1.0
+44,Czech Republic,"Supply chain, logistics, & delivery",1.2
+45,Denmark,Fintech,5.7
+46,Estonia,Artificial Intelligence,1.5
+47,Estonia,Auto & transportation,8.4
+48,Finland,Internet software & services,2.0
+49,Finland,Mobile & telecommunications,1.0
+50,Finland,"Supply chain, logistics, & delivery",5.7
+51,France,Artificial Intelligence,2.0
+52,France,Auto & transportation,2.0
+53,France,E-commerce & direct-to-consumer,21.439999999999998
+54,France,Fintech,10.18
+55,France,Hardware,3.5
+56,France,Health,2.1399999999999997
+57,France,Internet software & services,4.199999999999999
+58,France,Other,4.41
+59,Germany,Auto & transportation,3.0
+60,Germany,Consumer & retail,1.0
+61,Germany,Data management & analytics,11.0
+62,Germany,E-commerce & direct-to-consumer,7.95
+63,Germany,Fintech,19.229999999999997
+64,Germany,Hardware,1.0
+65,Germany,Health,3.52
+66,Germany,Internet software & services,10.4
+67,Germany,Other,3.2
+68,Germany,"Supply chain, logistics, & delivery",2.3
+69,Germany,Travel,4.1
+70,Hong Kong,Consumer & retail,2.0
+71,Hong Kong,"Supply chain, logistics, & delivery",10.0
+72,Hong Kong,Travel,1.35
+73,India,Auto & transportation,12.5
+74,India,Data management & analytics,1.0
+75,India,E-commerce & direct-to-consumer,30.119999999999997
+76,India,Edtech,30.94
+77,India,Fintech,45.26
+78,India,Health,2.9
+79,India,Internet software & services,28.750000000000004
+80,India,Mobile & telecommunications,1.0
+81,India,Other,2.4
+82,India,"Supply chain, logistics, & delivery",22.58
+83,India,Travel,9.6
+84,Indonesia,Consumer & retail,1.0
+85,Indonesia,E-commerce & direct-to-consumer,2.0
+86,Indonesia,Fintech,4.9
+87,Indonesia,"Supply chain, logistics, & delivery",20.0
+88,Indonesia,Travel,3.0
+89,Ireland,Fintech,1.6
+90,Ireland,Health,1.0
+91,Ireland,Internet software & services,6.45
+92,Israel,Artificial Intelligence,3.83
+93,Israel,Cybersecurity,15.24
+94,Israel,Data management & analytics,1.4
+95,Israel,Edtech,1.0
+96,Israel,Fintech,4.0
+97,Israel,Hardware,1.5
+98,Israel,Health,1.3
+99,Israel,Internet software & services,2.65
+100,Israel,Mobile & telecommunications,5.0
+101,Israel,Other,1.5
+102,Israel,"Supply chain, logistics, & delivery",1.0
+103,Italy,Fintech,1.0
+104,Japan,Artificial Intelligence,2.0
+105,Japan,Fintech,2.6
+106,Japan,Mobile & telecommunications,2.0
+107,Japan,Other,2.2199999999999998
+108,Lithuania,E-commerce & direct-to-consumer,4.53
+109,Luxembourg,Other,2.0
+110,Malaysia,E-commerce & direct-to-consumer,1.7
+111,Mexico,E-commerce & direct-to-consumer,9.899999999999999
+112,Mexico,Fintech,6.5
+113,Netherlands,E-commerce & direct-to-consumer,1.0
+114,Netherlands,Fintech,14.0
+115,Netherlands,Hardware,1.0
+116,Netherlands,Mobile & telecommunications,3.8
+117,Nigeria,Fintech,2.0
+118,Norway,Data management & analytics,2.5
+119,Norway,E-commerce & direct-to-consumer,2.2
+120,Philippines,Fintech,2.0
+121,Philippines,Other,1.0
+122,Senegal,Fintech,1.7
+123,South Africa,Consumer & retail,1.59
+124,South Africa,Mobile & telecommunications,1.0
+125,South Korea,Auto & transportation,1.0
+126,South Korea,Consumer & retail,1.19
+127,South Korea,E-commerce & direct-to-consumer,5.87
+128,South Korea,Fintech,8.4
+129,South Korea,Health,1.04
+130,South Korea,Mobile & telecommunications,4.0
+131,South Korea,Other,1.32
+132,South Korea,"Supply chain, logistics, & delivery",3.3
+133,South Korea,Travel,1.0
+134,Spain,Auto & transportation,1.4
+135,Spain,Internet software & services,2.35
+136,Spain,Travel,1.3
+137,Sweden,Auto & transportation,1.44
+138,Sweden,Fintech,45.6
+139,Sweden,Health,2.0
+140,Sweden,Internet software & services,1.4
+141,Sweden,Other,9.08
+142,Sweden,Travel,1.0
+143,Switzerland,Cybersecurity,2.5
+144,Switzerland,Data management & analytics,1.1
+145,Switzerland,Fintech,1.0
+146,Switzerland,Health,1.0
+147,Switzerland,"Supply chain, logistics, & delivery",1.0
+148,Thailand,Fintech,1.5
+149,Thailand,"Supply chain, logistics, & delivery",1.0
+150,Turkey,E-commerce & direct-to-consumer,7.5
+151,Turkey,Internet software & services,1.22
+152,Turkey,Mobile & telecommunications,2.75
+153,United Arab Emirates,Other,3.5
+154,United Arab Emirates,"Supply chain, logistics, & delivery",1.0
+155,United Kingdom,Artificial Intelligence,4.77
+156,United Kingdom,Auto & transportation,1.5
+157,United Kingdom,Consumer & retail,1.24
+158,United Kingdom,Data management & analytics,1.5
+159,United Kingdom,E-commerce & direct-to-consumer,2.7800000000000002
+160,United Kingdom,Fintech,130.46999999999997
+161,United Kingdom,Hardware,11.1
+162,United Kingdom,Health,3.0
+163,United Kingdom,Internet software & services,7.75
+164,United Kingdom,Mobile & telecommunications,1.4
+165,United Kingdom,Other,10.469999999999999
+166,United Kingdom,"Supply chain, logistics, & delivery",1.7
+167,United States,Artificial Intelligence,122.27
+168,United States,Auto & transportation,13.099999999999998
+169,United States,Consumer & retail,28.95
+170,United States,Cybersecurity,93.99000000000001
+171,United States,Data management & analytics,108.97
+172,United States,E-commerce & direct-to-consumer,108.56999999999998
+173,United States,Edtech,18.5
+174,United States,Fintech,432.90999999999997
+175,United States,Hardware,22.500000000000004
+176,United States,Health,143.29999999999998
+177,United States,Internet software & services,412.79999999999984
+178,United States,Mobile & telecommunications,35.63
+179,United States,Other,202.35000000000002
+180,United States,"Supply chain, logistics, & delivery",78.64999999999998
+181,United States,Travel,7.25
+182,Vietnam,Fintech,2.27
+183,Vietnam,Internet software & services,3.0
